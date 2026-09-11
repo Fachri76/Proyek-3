@@ -1,0 +1,105 @@
+:root {
+    --primary: #2457d6;
+    --background: #f3f4f6;
+    --text: #172033;
+    --space: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+#pricing-title {
+    text-align: center;
+}
+
+.pricing-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+    margin-top: 40px;
+}
+
+.price-card {
+    flex: 1;
+    padding: 25px;
+
+    background-color: white;
+
+    border: 2px solid #cccccc;
+    border-radius: 12px;
+}
+
+.price-card--featured {
+    border-color: var(--primary);
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.badge {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.button {
+    display: block;
+    width: 100%;
+
+    padding: 10px;
+
+    color: white;
+    background-color: var(--primary);
+
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: #193ca0;
+}
+
+.button:focus-visible {
+    outline: 3px solid black;
+    outline-offset: 3px;
+}
+
+#daftar {
+    padding: 30px;
+    text-align: center;
+}
+
+
+/* Tampilan layar besar */
+@media (min-width: 768px) {
+
+    .pricing-list {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .price-card--featured {
+        flex-grow: 1.15;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+}
